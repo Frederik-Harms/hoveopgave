@@ -68,10 +68,15 @@ body{
   }
 
 .pc-text{
-  margin-top: 33vh;
-  color: #ffffff;
+  color: white;
+  font-size: 36px;
+  margin-left: -60vw;
+  margin-top: 3vh;
 }
 
+b{
+  color: deeppink;
+}
 
 .header {
   width: 50%;
