@@ -8,6 +8,46 @@ body{
   font-family: 'Work Sans', sans-serif;
 }
 
+.header {
+  width: 100%;
+  position:relative;
+  text-align:center;
+  background-color:white;
+}
+
+ul {
+  list-style-type: none;
+  margin-left: 25%;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: #03133C;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #bc126d;
+  color: #ffffff;
+}
+
+.active {
+  color: #FF1393;
+}
+
+.active:hover{
+  background-color: #bc126d;
+  color: #ffffff;
+}
+
 
   /* The laptop with borders */
   .laptop {
@@ -16,7 +56,7 @@ body{
     -webkit-transform: scale(.6) translate(-50%); /* Scaled down for a better Try-it experience (change to 1 for full scale) */
     transform: scale(.6) translate(-50%); /* Scaled down for a better Try-it experience (change to 1 for full scale) */
     left: 50%;
-    top: 10%;
+    top: 20%;
     position: absolute;
     width: 1366px;
     height: 800px;
@@ -78,29 +118,14 @@ b{
   color: deeppink;
 }
 
-.header {
-  width: 50%;
-  top: 2vh;
-  margin-left: 25%;
-  position:relative;
-  text-align:center;
-  color:white;
-}
 
-ul{
-  list-style: none;
-  text-decoration: none;
-}
-
-li{
-  display: inline;
-}
 
 .inner-header {
   height:75vh;
   width:100%;
   margin: 0;
   padding: 0;
+  margin-bottom: 10vh;
 }
 
 .flex { /*Flexbox for containers*/
@@ -110,6 +135,15 @@ li{
   text-align: center;
 }
 
+section{
+  width: auto;
+  height: 30vh;
+  background-color: #ffffff;
+}
+
+footer{
+  margin-top: 10vh;
+}
 
 .waves {
   position:relative;
