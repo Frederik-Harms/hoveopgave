@@ -1,205 +1,447 @@
-*{
+* {
   margin: 0;
   padding: 0;
 }
 
-body{
-  background: linear-gradient(60deg, rgba(0,0,70) 0%, rgba(28,181,224,1) 100%);
+html {
+  background: linear-gradient(60deg, rgba(0, 0, 70) 0%, rgba(28, 181, 224, 1) 100%);
   font-family: 'Work Sans', sans-serif;
+  height: 100%;
 }
 
-.header {
-  width: 100%;
-  position:relative;
-  text-align:center;
-  background-color:white;
+/* LOG IND SYSTEM */
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  margin-left: 25vw;
+  border-radius: 10px;
+  font-size: 22px;
 }
 
-ul {
-  list-style-type: none;
-  margin-left: 25%;
-  padding: 0;
-  overflow: hidden;
-}
-
-li {
-  float: left;
-}
-
-li a {
-  display: block;
-  color: #03133C;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-li a:hover:not(.active) {
-  background-color: #bc126d;
-  color: #ffffff;
-}
-
-.active {
-  color: #FF1393;
-}
-
-.active:hover{
-  background-color: #bc126d;
-  color: #ffffff;
-}
-
-
-  /* The laptop with borders */
-  .laptop {
-    -webkit-transform-origin: 0 0;
-    transform-origin: 0 0;
-    -webkit-transform: scale(.6) translate(-50%); /* Scaled down for a better Try-it experience (change to 1 for full scale) */
-    transform: scale(.6) translate(-50%); /* Scaled down for a better Try-it experience (change to 1 for full scale) */
-    left: 50%;
-    top: 20%;
-    position: absolute;
-    width: 1366px;
-    height: 800px;
-    border-radius: 6px;
-    border-style: solid;
-    border-color: #f9982f;
-    border-width: 24px 24px 80px;
-    background-color: #f9982f;
-
-  }
-
-  /* The keyboard of the laptop */
-  .laptop:after {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 1600px;
-    height: 60px;
-    margin: 80px 0 0 -110px;
-    background: #f9982f;
-    border-radius: 6px;
-  }
-
-  /* The top of the keyboard */
-  .laptop:before {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 250px;
-    height: 30px;
-    bottom: -110px;
-    left: 50%;
-    -webkit-transform: translate(-50%);
-    transform: translate(-50%);
-    background: #db8529;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    z-index: 1;
-  }
-
-  /* The screen (or content) of the device */
-  .laptop .content {
-    width: 1366px;
-    height: 800px;
-    overflow: hidden;
-    border: none;
-    background: linear-gradient(60deg, rgba(0,78,146,1) 0%, rgba(0,4,40,1) 100%);
-    font-size: 102px;
-  }
-
-.pc-text{
+/* Set a style for all buttons */
+button {
+  background-color: #F9982F;
   color: white;
-  font-size: 36px;
-  margin-left: -60vw;
-  margin-top: 3vh;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 10%;
+  font-size: 22px;
+  border-radius: 8px;
 }
 
-b{
+button:hover {
+  background-color: #fa8201;
+}
+
+button a{
+  text-decoration: none;
+  color: #ffffff;
+  display: block;
+}
+
+.flex-name {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 26px;
+  color: #ffffff;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+.container {
+  padding: 13px;
+}
+
+span.psw {
+  padding-top: 5px;
+  margin-right: 7vw;
+  font-size: 18px;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.psw a {
   color: deeppink;
 }
 
+h4 {
+  font-size: 31px;
+}
 
+.opret-btn{
+  border: 2px solid #F9982F;
+  background-color: transparent;
+
+}
+
+.opret-btn:hover{
+  border: 2px solid #90215d;
+  background-color: #BC126D;
+  opacity: 1;
+}
+
+.opret-bruger{
+  margin-bottom: 1vh;
+}
+
+.signup-text {
+  font-size: 18px;
+}
+
+.opret-flex{
+  display: flex;
+  flex-direction: column;
+  margin-top: 5vh;
+}
+
+.opret-flex label{
+  color: #000000 !important;
+}
+
+.opret-flex input{
+  margin-left: 20vw;
+}
+
+.signupbtn{
+  width: auto;
+}
+
+.cancelbtn{
+  width: auto;
+  border: 2px solid #F9982F;
+  background-color: #ffffff;
+  color: #F9982F;
+}
+
+.cancelbtn:hover{
+  border: 2px solid #90215d;
+  background-color: #BC126D;
+  color: #ffffff;
+  opacity: 1;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 6% auto auto auto;
+  /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%;
+  /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  color: #000000;
+  font-size: 35px;
+  font-weight: bold;
+  right: 10vw;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+
+  .cancelbtn {
+    width: 100%;
+    border: 2px solid #f44336;
+    background-color: #ffffff;
+  }
+}
+
+/* FORSIDE */
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 3vh;
+}
+
+header a{
+  list-style: none;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.logout{
+  display: flex;
+  flex-direction: row;
+  margin-right: 5vw;
+}
+
+.avatar{
+  width: 2vw;
+  height: 4vh;
+  border: 2px solid #ffffff;
+  border-radius: 60%;
+  margin-left: 1vw;
+  margin-top: -1vh;
+}
+
+.line-vandret{
+  width: 80%;
+  margin-top: 2vh;
+  margin-left: 10%;
+}
+
+.line-lodret{
+  border: none;
+    border-left:  1px solid hsl(0,0%,100%);
+    margin-top: 5vh;
+    height: 70vh;
+    width:   1px;
+    margin-left: 7%;
+}
+
+.line-vandret2{
+  width: 80%;
+  margin-top: 5vh;
+  margin-left: 10%;
+}
+
+/* The laptop with borders */
+.laptop {
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scale(.6) translate(-50%);
+  /* Scaled down for a better Try-it experience (change to 1 for full scale) */
+  transform: scale(.6) translate(-50%);
+  /* Scaled down for a better Try-it experience (change to 1 for full scale) */
+  left: 50%;
+  top: 20%;
+  position: absolute;
+  width: 1366px;
+  height: 800px;
+  border-radius: 6px;
+  border-style: solid;
+  border-color: #f9982f;
+  border-width: 24px 24px 80px;
+  background-color: #f9982f;
+}
+
+/* The keyboard of the laptop */
+.laptop:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 1600px;
+  height: 60px;
+  margin: 80px 0 0 -110px;
+  background: #f9982f;
+  border-radius: 6px;
+}
+
+/* The top of the keyboard */
+.laptop:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 250px;
+  height: 30px;
+  bottom: -110px;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+  transform: translate(-50%);
+  background: #db8529;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  z-index: 1;
+}
+
+/* The screen (or content) of the device */
+.laptop .content {
+  width: 1366px;
+  height: 800px;
+  overflow: hidden;
+  border: none;
+  background: linear-gradient(60deg, rgba(0, 78, 146, 1) 0%, rgba(0, 4, 40, 1) 100%);
+  font-size: 102px;
+}
+
+
+.logo{
+  width: 10%;
+  margin-top: 5vh;
+  margin-bottom: -2vh;
+}
+
+.logo-opret{
+  width: 5%;
+  position: absolute;
+  left: 10vw;
+}
+
+.logo-forside{
+  width: 3%;
+  margin-top: 0vh;
+  margin-left: 2vw;
+}
+
+
+.pc-text {
+  color: white;
+  font-size: 36px;
+  margin-bottom: 5vh;
+}
+
+b {
+  color: deeppink;
+}
 
 .inner-header {
-  height:75vh;
-  width:100%;
+  height: 100%;
+  width: 100%;
   margin: 0;
   padding: 0;
   margin-bottom: 10vh;
 }
 
-.flex { /*Flexbox for containers*/
+.flex {
+  /*Flexbox for containers*/
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
 
-section{
+section {
   width: auto;
   height: 30vh;
   background-color: #ffffff;
 }
 
-footer{
-  margin-top: 10vh;
+
+.waves-background{
+  margin-top: 80.4vh;
+  background-color: transparent;
 }
 
 .waves {
-  position:relative;
+  position: relative;
+  top: 100%;
   width: 100%;
-  height:15vh;
-  margin-bottom:-7px; /*Fix for safari gap*/
-  min-height:100px;
-  max-height:150px;
+  height: 15vh;
+  margin-bottom: -7px;
+  /*Fix for safari gap*/
+  min-height: 100px;
+  max-height: 150px;
 }
 
 .content-bottom {
-  position:relative;
-  height:20vh;
-  text-align:center;
+  position: relative;
+  top: 100%;
+  height: 5vh;
+  text-align: center;
   background-color: white;
 }
 
 /* Animation */
-
-.parallax > use {
-  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+.parallax>use {
+  animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
 }
-.parallax > use:nth-child(1) {
+
+.parallax>use:nth-child(1) {
   animation-delay: -2s;
   animation-duration: 7s;
 }
-.parallax > use:nth-child(2) {
+
+.parallax>use:nth-child(2) {
   animation-delay: -3s;
   animation-duration: 10s;
 }
-.parallax > use:nth-child(3) {
+
+.parallax>use:nth-child(3) {
   animation-delay: -4s;
   animation-duration: 13s;
 }
-.parallax > use:nth-child(4) {
+
+.parallax>use:nth-child(4) {
   animation-delay: -5s;
   animation-duration: 20s;
 }
+
 @keyframes move-forever {
   0% {
-   transform: translate3d(-90px,0,0);
+    transform: translate3d(-90px, 0, 0);
   }
+
   100% {
-    transform: translate3d(85px,0,0);
+    transform: translate3d(85px, 0, 0);
   }
 }
+
 /*Shrinking for mobile*/
 @media (max-width: 768px) {
   .waves {
-    height:40px;
-    min-height:40px;
+    height: 40px;
+    min-height: 40px;
   }
+
   .content {
-    height:30vh;
+    height: 30vh;
   }
+
   h1 {
-    font-size:24px;
+    font-size: 24px;
   }
+}
+
+.box-flex{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  margin-top: 7vh;
+  left: 2.5%;
+}
+
+.box{
+  width: 2.5vw;
+  height: 4vh;
+  border:1px solid #ffffff;
+  margin-top: 1vh;
 }

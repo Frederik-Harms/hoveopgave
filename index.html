@@ -1,67 +1,100 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <title>Includi</title>
-  </head>
-  <body>
-<header class="header">
-  <ul>
-    <li><a class="active" href="#home">HJEM</a></li>
-    <li><a href="#contact">KONTAKT</a></li>
-    <li><a href="#about">OM OS</a></li>
-  </ul>
-</header>
-<div style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M-4.51,22.20 C156.31,102.13 271.49,-49.98 529.34,38.97 L500.00,0.00 L0.00,0.00 Z" style="stroke: none; fill: #ffffff;"></path></svg></div>
 
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <title>Includi</title>
+</head>
+
+<body>
   <div class="inner-header flex">
     <div class="laptop">
       <div class="content">
-        <h3 class="pc-text">INCL<b>U</b>DI</h3>
+        <img class="logo" src="img/logo-hovedopgave.png" alt="Logo">
+        <h3 class="pc-text">INCLUDI</h3>
+
+
+        <div class="container">
+          <div class="flex-name">
+            <label for="uname"></label>
+            <input type="text" placeholder="Brugernavn eller e-mail" name="uname" required>
+            <label for="psw"></label>
+            <input type="password" placeholder="Adgangskode" name="psw" required>
+            <span class="psw">Glemt <a href="#">adgangskode?</a></span>
+          </div>
+          <button><a href="forside.html">LOG IND</a></button>
+          <button class="opret-btn" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">OPRET</button>
+        </div>
+
+        <div id="id01" class="modal">
+          <form class="modal-content" action="/action_page.php">
+            <div class="container">
+
+              <span onclick="document.getElementById('id01').style.display='none'"
+               class="close" title="Close Modal">&times;</span>
+               <img class="logo-opret" src="img/logo-hovedopgave.png" alt="Logo">
+              <h4 class="opret-bruger">OPRET BRUGER</h4>
+              <p class="signup-text">Udfyld venligst denne formular for at oprette en konto.</p>
+              <hr>
+              <div class="opret-flex">
+              <label for="email">E-mail</label>
+              <input type="text" placeholder="Enter Email" name="email" required>
+              <label for="psw">Adgangskode</label>
+              <input type="password" placeholder="Enter Password" name="psw" required>
+              <label for="psw-repeat">Gentage Adgangskode</label>
+              <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+
+              <p class="signup-text">Ved at oprette en konto accepterer du vores <a href="#" style="color:#0000FF">vilkår & betingelser</a>.</p>
+</div>
+              <div class="clearfix">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">ANULLER</button>
+                <button type="submit" class="signupbtn">OPRET</button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        </form>
       </div>
     </div>
   </div>
 
-  <div style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #ffffff;"></path></svg></div>
+
+  <!--Waves Container-->
+  <div class="waves-background">
+  <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+  <defs>
+  <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+  </defs>
+  <g class="parallax">
+  <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+  <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+  <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+  <use xlink:href="#gentle-wave" x="48" y="7" fill="#ffffff" />
+  </g>
+  </svg>
   </div>
-<section class="midt">
-
-</section>
-<div style="height: 150px; overflow: hidden;">
-<svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
-  <path d="M0.00,92.27 C216.83,192.92 304.30,8.39 500.00,109.03 L500.00,0.00 L0.00,0.00 Z" style="stroke: none;fill: #ffffff;"></path>
-</svg>
-</div>
-
-<footer>
-<!--Waves Container-->
-<div>
-<svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-<defs>
-<path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-</defs>
-<g class="parallax">
-<use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
-<use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
-<use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
-<use xlink:href="#gentle-wave" x="48" y="7" fill="#ffffff" />
-</g>
-</svg>
-</div>
-<!--Waves end-->
+  <!--Waves end-->
 
 
-<!--Header ends-->
+  <!--Header ends-->
 
-<!--Content starts-->
-<div class="content-bottom flex">
-</div>
-<!--Content ends-->
-</footer>
-  </body>
+  <!--Content starts-->
+  <div class="content-bottom flex">
+  </div>
+  <!--Content ends-->
+
+
+  <script src="js/login.js"></script>
+  <script src="js/signup.js"></script>
+
+
+</body>
+
 </html>
