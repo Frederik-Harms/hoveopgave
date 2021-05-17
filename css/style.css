@@ -65,6 +65,7 @@ label {
 
 .container {
   padding: 13px;
+  height: 60vh;
 }
 
 span.psw {
@@ -100,6 +101,7 @@ h4 {
 }
 
 .signup-text {
+  margin-top: 5vh;
   font-size: 18px;
 }
 
@@ -148,10 +150,6 @@ h4 {
   /* Full width */
   height: 100%;
   /* Full height */
-  background-color: rgb(0, 0, 0);
-  /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4);
-  /* Black w/ opacity */
 }
 
 /* Modal Content/Box */
@@ -258,56 +256,18 @@ header a{
   width: 1366px;
   height: 800px;
   border-radius: 6px;
-  border-style: solid;
-  border-color: #f9982f;
-  border-width: 24px 24px 80px;
-  background-color: #f9982f;
+
 }
 
-/* The keyboard of the laptop */
-.laptop:after {
-  content: '';
-  display: block;
-  position: absolute;
-  width: 1600px;
-  height: 60px;
-  margin: 80px 0 0 -110px;
-  background: #f9982f;
-  border-radius: 6px;
-}
-
-/* The top of the keyboard */
-.laptop:before {
-  content: '';
-  display: block;
-  position: absolute;
-  width: 250px;
-  height: 30px;
-  bottom: -110px;
-  left: 50%;
-  -webkit-transform: translate(-50%);
-  transform: translate(-50%);
-  background: #db8529;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  z-index: 1;
-}
-
-/* The screen (or content) of the device */
-.laptop .content {
-  width: 1366px;
-  height: 800px;
-  overflow: hidden;
-  border: none;
-  background: linear-gradient(60deg, rgba(0, 78, 146, 1) 0%, rgba(0, 4, 40, 1) 100%);
-  font-size: 102px;
+.clearfix{
+  margin-top: 1vh;
 }
 
 
 .logo{
-  width: 10%;
-  margin-top: 5vh;
-  margin-bottom: -2vh;
+  width: 30%;
+  margin-top: 0vh;
+  margin-bottom: 0vh;
 }
 
 .logo-opret{
