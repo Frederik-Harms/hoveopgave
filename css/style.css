@@ -63,6 +63,10 @@ label {
   position: relative;
 }
 
+.logind-opret{
+  margin-top: 3vh;
+}
+
 .container {
   padding: 13px;
   height: 60vh;
@@ -77,7 +81,7 @@ span.psw {
 }
 
 .psw a {
-  color: deeppink;
+  color: #e94d85;
 }
 
 h4 {
@@ -240,6 +244,21 @@ header a{
   width: 80%;
   margin-top: 5vh;
   margin-left: 10%;
+}
+
+.mainbox-flex{
+  display: flex;
+  flex-direction: column-reverse;
+  position: absolute; /* VIL HELST UNDGÅ */
+  left: 15%;
+  top:25%;
+}
+
+.mainbox{
+    width: 2.5vw;
+    height: 4vh;
+    border:1px solid #ffffff;
+    margin-top: 1vh;
 }
 
 /* The laptop with borders */
