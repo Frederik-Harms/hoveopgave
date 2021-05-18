@@ -54,6 +54,9 @@ button a{
 label {
   font-size: 26px;
   color: #ffffff;
+  text-align: left;
+  width: 50%;
+  margin-left: 37%;
 }
 
 /* Center the image and position the close button */
@@ -225,6 +228,15 @@ header a{
   margin-top: -1vh;
 }
 
+.feather{
+  margin-right: 1vw;
+}
+
+.feather2{
+  margin-left: 1px;
+  margin-top: 3.6px;
+}
+
 .line-vandret{
   width: 80%;
   margin-top: 2vh;
@@ -259,6 +271,35 @@ header a{
     height: 4vh;
     border:1px solid #ffffff;
     margin-top: 1vh;
+}
+
+#container2 {
+  position: absolute;
+  top: 70%;
+  left: 75%;
+}
+
+#videoElement {
+  width: 15vw;
+	height: 15vh;
+  border-radius: 20px;
+    overflow: hidden;
+}
+
+video{
+  border-radius: 20px;
+    overflow: hidden;
+}
+
+#stop{
+  right: 5vw;
+  top: 3vh;
+  position: relative;
+    font-size: 12px;
+    font-weight: bold;
+    width: auto;
+    padding: 5px;
+    background-color: transparent
 }
 
 /* The laptop with borders */
@@ -415,10 +456,12 @@ section {
   flex-direction: column;
   position: absolute;
   margin-top: 7vh;
-  left: 2.5%;
+  left: 2.3%;
+
 }
 
 .box{
+  border-radius: 10%;
   width: 2.5vw;
   height: 4vh;
   border:1px solid #ffffff;
